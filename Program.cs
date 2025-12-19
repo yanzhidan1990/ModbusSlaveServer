@@ -7,7 +7,7 @@ class Program
     static async Task Main(string[] args)
     {
         // 创建TCP监听器
-        var slaveTcpListener = new TcpListener(IPAddress.Parse("127.0.0.1"), 502);
+        var slaveTcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), 502);
         slaveTcpListener.Start();
 
         IModbusFactory factory = new ModbusFactory();
